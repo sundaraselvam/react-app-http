@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Create = () => {
-  const [inputs, setInputs] = useState({
+  const [formData, setFormData] = useState({
     pname: "",
     price: "",
     description: "",
@@ -9,7 +9,7 @@ const Create = () => {
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInputs((prevdata) => ({ ...prevdata, [name]: value }));
+    setFormData((predata) => ({ ...predata, [name]: value }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,9 +31,7 @@ const Create = () => {
             name="pname"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
-            onChange={(e) => {
-              handleChange(e);
-            }}
+            onChange={handleChange}
           />
         </div>
         <div class="mb-5">
@@ -45,9 +43,7 @@ const Create = () => {
             name="price"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
-            onChange={(e) => {
-              handleChange(e);
-            }}
+            onChange={handleChange}
           />
         </div>
         <div class="mb-5">
@@ -59,9 +55,7 @@ const Create = () => {
             name="description"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
-            onChange={(e) => {
-              handleChange(e);
-            }}
+            onChange={handleChange}
           />
         </div>
         <div class="mb-5">
@@ -73,9 +67,7 @@ const Create = () => {
             name="url"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
-            onChange={(e) => {
-              handleChange(e);
-            }}
+            onChange={handleChange}
           />
         </div>
         <button

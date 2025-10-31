@@ -11,7 +11,7 @@ const Create = () => {
     const { name, value } = e.target;
     setFormData((predata) => ({ ...predata, [name]: value }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   };
   return (
